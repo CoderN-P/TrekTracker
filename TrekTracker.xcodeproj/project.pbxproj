@@ -14,6 +14,13 @@
 		D658B87A2C29F862000CC7F2 /* TrekTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8792C29F862000CC7F2 /* TrekTrackerTests.swift */; };
 		D658B8842C29F862000CC7F2 /* TrekTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8832C29F862000CC7F2 /* TrekTrackerUITests.swift */; };
 		D658B8862C29F862000CC7F2 /* TrekTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8852C29F862000CC7F2 /* TrekTrackerUITestsLaunchTests.swift */; };
+		D658B8932C29FDDF000CC7F2 /* getTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8922C29FDDF000CC7F2 /* getTimeString.swift */; };
+		D658B8952C29FFB5000CC7F2 /* getDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8942C29FFB5000CC7F2 /* getDate.swift */; };
+		D658B8972C2A0250000CC7F2 /* BarStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8962C2A0250000CC7F2 /* BarStatsView.swift */; };
+		D658B8992C2A02DA000CC7F2 /* getBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8982C2A02DA000CC7F2 /* getBarColor.swift */; };
+		D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */; };
+		D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */; };
+		D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3B2C2A1055000CC7F2 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		D658B87F2C29F862000CC7F2 /* TrekTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrekTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D658B8832C29F862000CC7F2 /* TrekTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTrackerUITests.swift; sourceTree = "<group>"; };
 		D658B8852C29F862000CC7F2 /* TrekTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D658B8922C29FDDF000CC7F2 /* getTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getTimeString.swift; sourceTree = "<group>"; };
+		D658B8942C29FFB5000CC7F2 /* getDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDate.swift; sourceTree = "<group>"; };
+		D658B8962C2A0250000CC7F2 /* BarStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarStatsView.swift; sourceTree = "<group>"; };
+		D658B8982C2A02DA000CC7F2 /* getBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getBarColor.swift; sourceTree = "<group>"; };
+		D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getBarHeight.swift; sourceTree = "<group>"; };
+		D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		D658BB3B2C2A1055000CC7F2 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,8 @@
 		D658B8672C29F860000CC7F2 /* TrekTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D658B8A12C2A06C4000CC7F2 /* utils */,
+				D658B8A02C2A06B0000CC7F2 /* Views */,
 				D658B8682C29F860000CC7F2 /* TrekTrackerApp.swift */,
 				D658B86A2C29F860000CC7F2 /* ContentView.swift */,
 				D658B86C2C29F861000CC7F2 /* Assets.xcassets */,
@@ -125,6 +141,27 @@
 				D658B8852C29F862000CC7F2 /* TrekTrackerUITestsLaunchTests.swift */,
 			);
 			path = TrekTrackerUITests;
+			sourceTree = "<group>";
+		};
+		D658B8A02C2A06B0000CC7F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D658B8962C2A0250000CC7F2 /* BarStatsView.swift */,
+				D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */,
+				D658BB3B2C2A1055000CC7F2 /* FooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D658B8A12C2A06C4000CC7F2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				D658B8922C29FDDF000CC7F2 /* getTimeString.swift */,
+				D658B8942C29FFB5000CC7F2 /* getDate.swift */,
+				D658B8982C2A02DA000CC7F2 /* getBarColor.swift */,
+				D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D658B86B2C29F860000CC7F2 /* ContentView.swift in Sources */,
+				D658B8972C2A0250000CC7F2 /* BarStatsView.swift in Sources */,
+				D658B8932C29FDDF000CC7F2 /* getTimeString.swift in Sources */,
+				D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */,
+				D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */,
+				D658B8952C29FFB5000CC7F2 /* getDate.swift in Sources */,
+				D658B8992C2A02DA000CC7F2 /* getBarColor.swift in Sources */,
 				D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */,
+				D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

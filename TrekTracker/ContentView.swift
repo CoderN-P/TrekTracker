@@ -9,13 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(alignment: .leading) {
+            
+            Text(getTimeString())
+                .fontWeight(.semibold)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            
+            Text(getDate())
+            
+            Spacer()
+            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+                Text("1000")
+                    .font(.system(size: 80))
+                    .bold()
+                Text("2 mi")
+                    .font(.system(size: 40))
+                    .bold()
+            }
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+
+            Spacer()
+            
+            TimelineView()
+            
+            Spacer()
+            
+            FooterView()
         }
-        .padding()
+        .frame(maxWidth: .infinity)
+        .ignoresSafeArea()
+    
     }
 }
 
