@@ -11,13 +11,16 @@ struct FooterView: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         HStack {
-            Text("hello")
+            VStack {
+                Image(systemName: "bars")
+                Text("Steps")
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(
             colorScheme == .dark ?
-                Color("gray_800")
+                Color("neutral_800")
             : Color("gray_200")
         )
     }

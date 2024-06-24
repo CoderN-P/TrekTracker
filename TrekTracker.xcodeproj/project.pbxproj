@@ -21,6 +21,8 @@
 		D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */; };
 		D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */; };
 		D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3B2C2A1055000CC7F2 /* FooterView.swift */; };
+		D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */; };
+		D658BB402C2A35EB000CC7F2 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getBarHeight.swift; sourceTree = "<group>"; };
 		D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		D658BB3B2C2A1055000CC7F2 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				D658B8962C2A0250000CC7F2 /* BarStatsView.swift */,
 				D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */,
 				D658BB3B2C2A1055000CC7F2 /* FooterView.swift */,
+				D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */,
+				D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,9 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D658B86B2C29F860000CC7F2 /* ContentView.swift in Sources */,
+				D658BB402C2A35EB000CC7F2 /* ExercisesView.swift in Sources */,
 				D658B8972C2A0250000CC7F2 /* BarStatsView.swift in Sources */,
 				D658B8932C29FDDF000CC7F2 /* getTimeString.swift in Sources */,
 				D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */,
+				D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */,
 				D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */,
 				D658B8952C29FFB5000CC7F2 /* getDate.swift in Sources */,
 				D658B8992C2A02DA000CC7F2 /* getBarColor.swift in Sources */,

@@ -9,5 +9,5 @@ import Foundation
 
 
 func getBarHeight(steps: Int, threshold: Int) -> CGFloat {
-    return min(CGFloat(steps/threshold)*200.0, 400.0)
+    return CGFloat(min(Double((steps*200)/threshold), 300.0))
 }

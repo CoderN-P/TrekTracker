@@ -11,13 +11,6 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text(getTimeString())
-                .fontWeight(.semibold)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            
-            Text(getDate())
-            
-            Spacer()
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 Text("1000")
                     .font(.system(size: 80))
@@ -32,12 +25,10 @@ struct ContentView: View {
             
             TimelineView()
             
-            Spacer()
-            
             FooterView()
         }
         .frame(maxWidth: .infinity)
-        .ignoresSafeArea()
+        .ignoresSafeArea(edges: .bottom)
     
     }
 }
