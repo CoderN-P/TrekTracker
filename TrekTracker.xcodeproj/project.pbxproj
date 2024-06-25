@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8682C29F860000CC7F2 /* TrekTrackerApp.swift */; };
-		D658B86B2C29F860000CC7F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B86A2C29F860000CC7F2 /* ContentView.swift */; };
 		D658B86D2C29F861000CC7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D658B86C2C29F861000CC7F2 /* Assets.xcassets */; };
 		D658B8702C29F861000CC7F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D658B86F2C29F861000CC7F2 /* Preview Assets.xcassets */; };
 		D658B87A2C29F862000CC7F2 /* TrekTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B8792C29F862000CC7F2 /* TrekTrackerTests.swift */; };
@@ -23,6 +22,21 @@
 		D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3B2C2A1055000CC7F2 /* FooterView.swift */; };
 		D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */; };
 		D658BB402C2A35EB000CC7F2 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */; };
+		D658BB892C2A4E1F000CC7F2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB882C2A4E1F000CC7F2 /* SettingsView.swift */; };
+		D658BB912C2A4E5A000CC7F2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D658BB902C2A4E5A000CC7F2 /* WidgetKit.framework */; };
+		D658BB932C2A4E5A000CC7F2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D658BB922C2A4E5A000CC7F2 /* SwiftUI.framework */; };
+		D658BB962C2A4E5A000CC7F2 /* TrekTracker_WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB952C2A4E5A000CC7F2 /* TrekTracker_WidgetsBundle.swift */; };
+		D658BB982C2A4E5A000CC7F2 /* TrekTracker_WidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB972C2A4E5A000CC7F2 /* TrekTracker_WidgetsLiveActivity.swift */; };
+		D658BB9A2C2A4E5A000CC7F2 /* TrekTracker_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB992C2A4E5A000CC7F2 /* TrekTracker_Widgets.swift */; };
+		D658BB9C2C2A4E5A000CC7F2 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BB9B2C2A4E5A000CC7F2 /* AppIntent.swift */; };
+		D658BB9E2C2A4E5C000CC7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D658BB9D2C2A4E5C000CC7F2 /* Assets.xcassets */; };
+		D658BBA22C2A4E5C000CC7F2 /* TrekTracker WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D658BB8E2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D658BBA92C2A525C000CC7F2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBA82C2A525C000CC7F2 /* HealthKitManager.swift */; };
+		D658BBAC2C2A5458000CC7F2 /* Step1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBAB2C2A5458000CC7F2 /* Step1View.swift */; };
+		D658BBAE2C2A75A6000CC7F2 /* Step2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBAD2C2A75A6000CC7F2 /* Step2View.swift */; };
+		D658BBB02C2A7BAC000CC7F2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */; };
+		D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */; };
+		D658BBB42C2A8B39000CC7F2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +54,32 @@
 			remoteGlobalIDString = D658B8642C29F860000CC7F2;
 			remoteInfo = TrekTracker;
 		};
+		D658BBA02C2A4E5C000CC7F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D658B85D2C29F860000CC7F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D658BB8D2C2A4E5A000CC7F2;
+			remoteInfo = "TrekTracker WidgetsExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D658BBA62C2A4E5C000CC7F2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D658BBA22C2A4E5C000CC7F2 /* TrekTracker WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D658B8652C29F860000CC7F2 /* TrekTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrekTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D658B8682C29F860000CC7F2 /* TrekTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTrackerApp.swift; sourceTree = "<group>"; };
-		D658B86A2C29F860000CC7F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D658B86C2C29F861000CC7F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D658B86F2C29F861000CC7F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D658B8752C29F861000CC7F2 /* TrekTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrekTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +96,23 @@
 		D658BB3B2C2A1055000CC7F2 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		D658BB882C2A4E1F000CC7F2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D658BB8E2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TrekTracker WidgetsExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D658BB902C2A4E5A000CC7F2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D658BB922C2A4E5A000CC7F2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D658BB952C2A4E5A000CC7F2 /* TrekTracker_WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTracker_WidgetsBundle.swift; sourceTree = "<group>"; };
+		D658BB972C2A4E5A000CC7F2 /* TrekTracker_WidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTracker_WidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		D658BB992C2A4E5A000CC7F2 /* TrekTracker_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekTracker_Widgets.swift; sourceTree = "<group>"; };
+		D658BB9B2C2A4E5A000CC7F2 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		D658BB9D2C2A4E5C000CC7F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D658BB9F2C2A4E5C000CC7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D658BBA72C2A5081000CC7F2 /* TrekTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrekTracker.entitlements; sourceTree = "<group>"; };
+		D658BBA82C2A525C000CC7F2 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		D658BBAB2C2A5458000CC7F2 /* Step1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1View.swift; sourceTree = "<group>"; };
+		D658BBAD2C2A75A6000CC7F2 /* Step2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2View.swift; sourceTree = "<group>"; };
+		D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +137,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D658BB8B2C2A4E5A000CC7F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D658BB932C2A4E5A000CC7F2 /* SwiftUI.framework in Frameworks */,
+				D658BB912C2A4E5A000CC7F2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +155,8 @@
 				D658B8672C29F860000CC7F2 /* TrekTracker */,
 				D658B8782C29F862000CC7F2 /* TrekTrackerTests */,
 				D658B8822C29F862000CC7F2 /* TrekTrackerUITests */,
+				D658BB942C2A4E5A000CC7F2 /* TrekTracker Widgets */,
+				D658BB8F2C2A4E5A000CC7F2 /* Frameworks */,
 				D658B8662C29F860000CC7F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +167,7 @@
 				D658B8652C29F860000CC7F2 /* TrekTracker.app */,
 				D658B8752C29F861000CC7F2 /* TrekTrackerTests.xctest */,
 				D658B87F2C29F862000CC7F2 /* TrekTrackerUITests.xctest */,
+				D658BB8E2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,10 +175,10 @@
 		D658B8672C29F860000CC7F2 /* TrekTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D658BBA72C2A5081000CC7F2 /* TrekTracker.entitlements */,
 				D658B8A12C2A06C4000CC7F2 /* utils */,
 				D658B8A02C2A06B0000CC7F2 /* Views */,
 				D658B8682C29F860000CC7F2 /* TrekTrackerApp.swift */,
-				D658B86A2C29F860000CC7F2 /* ContentView.swift */,
 				D658B86C2C29F861000CC7F2 /* Assets.xcassets */,
 				D658B86E2C29F861000CC7F2 /* Preview Content */,
 			);
@@ -150,11 +213,16 @@
 		D658B8A02C2A06B0000CC7F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D658BBAA2C2A543E000CC7F2 /* Onboarding */,
 				D658B8962C2A0250000CC7F2 /* BarStatsView.swift */,
 				D658BB392C2A0DF2000CC7F2 /* TimelineView.swift */,
 				D658BB3B2C2A1055000CC7F2 /* FooterView.swift */,
 				D658BB3D2C2A34D4000CC7F2 /* WorkoutView.swift */,
 				D658BB3F2C2A35EB000CC7F2 /* ExercisesView.swift */,
+				D658BB882C2A4E1F000CC7F2 /* SettingsView.swift */,
+				D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */,
+				D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */,
+				D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,8 +234,40 @@
 				D658B8942C29FFB5000CC7F2 /* getDate.swift */,
 				D658B8982C2A02DA000CC7F2 /* getBarColor.swift */,
 				D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */,
+				D658BBA82C2A525C000CC7F2 /* HealthKitManager.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		D658BB8F2C2A4E5A000CC7F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D658BB902C2A4E5A000CC7F2 /* WidgetKit.framework */,
+				D658BB922C2A4E5A000CC7F2 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D658BB942C2A4E5A000CC7F2 /* TrekTracker Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D658BB952C2A4E5A000CC7F2 /* TrekTracker_WidgetsBundle.swift */,
+				D658BB972C2A4E5A000CC7F2 /* TrekTracker_WidgetsLiveActivity.swift */,
+				D658BB992C2A4E5A000CC7F2 /* TrekTracker_Widgets.swift */,
+				D658BB9B2C2A4E5A000CC7F2 /* AppIntent.swift */,
+				D658BB9D2C2A4E5C000CC7F2 /* Assets.xcassets */,
+				D658BB9F2C2A4E5C000CC7F2 /* Info.plist */,
+			);
+			path = "TrekTracker Widgets";
+			sourceTree = "<group>";
+		};
+		D658BBAA2C2A543E000CC7F2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D658BBAB2C2A5458000CC7F2 /* Step1View.swift */,
+				D658BBAD2C2A75A6000CC7F2 /* Step2View.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +280,12 @@
 				D658B8612C29F860000CC7F2 /* Sources */,
 				D658B8622C29F860000CC7F2 /* Frameworks */,
 				D658B8632C29F860000CC7F2 /* Resources */,
+				D658BBA62C2A4E5C000CC7F2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D658BBA12C2A4E5C000CC7F2 /* PBXTargetDependency */,
 			);
 			name = TrekTracker;
 			productName = TrekTracker;
@@ -226,6 +328,23 @@
 			productReference = D658B87F2C29F862000CC7F2 /* TrekTrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D658BB8D2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D658BBA32C2A4E5C000CC7F2 /* Build configuration list for PBXNativeTarget "TrekTracker WidgetsExtension" */;
+			buildPhases = (
+				D658BB8A2C2A4E5A000CC7F2 /* Sources */,
+				D658BB8B2C2A4E5A000CC7F2 /* Frameworks */,
+				D658BB8C2C2A4E5A000CC7F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrekTracker WidgetsExtension";
+			productName = "TrekTracker WidgetsExtension";
+			productReference = D658BB8E2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -247,6 +366,9 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = D658B8642C29F860000CC7F2;
 					};
+					D658BB8D2C2A4E5A000CC7F2 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = D658B8602C29F860000CC7F2 /* Build configuration list for PBXProject "TrekTracker" */;
@@ -265,6 +387,7 @@
 				D658B8642C29F860000CC7F2 /* TrekTracker */,
 				D658B8742C29F861000CC7F2 /* TrekTrackerTests */,
 				D658B87E2C29F862000CC7F2 /* TrekTrackerUITests */,
+				D658BB8D2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +416,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D658BB8C2C2A4E5A000CC7F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D658BB9E2C2A4E5C000CC7F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -300,15 +431,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D658B86B2C29F860000CC7F2 /* ContentView.swift in Sources */,
 				D658BB402C2A35EB000CC7F2 /* ExercisesView.swift in Sources */,
 				D658B8972C2A0250000CC7F2 /* BarStatsView.swift in Sources */,
 				D658B8932C29FDDF000CC7F2 /* getTimeString.swift in Sources */,
+				D658BBAC2C2A5458000CC7F2 /* Step1View.swift in Sources */,
 				D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */,
 				D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */,
+				D658BBB42C2A8B39000CC7F2 /* HeaderView.swift in Sources */,
 				D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */,
+				D658BBAE2C2A75A6000CC7F2 /* Step2View.swift in Sources */,
+				D658BBB02C2A7BAC000CC7F2 /* MainView.swift in Sources */,
 				D658B8952C29FFB5000CC7F2 /* getDate.swift in Sources */,
 				D658B8992C2A02DA000CC7F2 /* getBarColor.swift in Sources */,
+				D658BB892C2A4E1F000CC7F2 /* SettingsView.swift in Sources */,
+				D658BBA92C2A525C000CC7F2 /* HealthKitManager.swift in Sources */,
+				D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */,
 				D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */,
 				D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */,
 			);
@@ -331,6 +468,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D658BB8A2C2A4E5A000CC7F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D658BB9A2C2A4E5A000CC7F2 /* TrekTracker_Widgets.swift in Sources */,
+				D658BB9C2C2A4E5A000CC7F2 /* AppIntent.swift in Sources */,
+				D658BB962C2A4E5A000CC7F2 /* TrekTracker_WidgetsBundle.swift in Sources */,
+				D658BB982C2A4E5A000CC7F2 /* TrekTracker_WidgetsLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -343,6 +491,11 @@
 			isa = PBXTargetDependency;
 			target = D658B8642C29F860000CC7F2 /* TrekTracker */;
 			targetProxy = D658B8802C29F862000CC7F2 /* PBXContainerItemProxy */;
+		};
+		D658BBA12C2A4E5C000CC7F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D658BB8D2C2A4E5A000CC7F2 /* TrekTracker WidgetsExtension */;
+			targetProxy = D658BBA02C2A4E5C000CC7F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -469,14 +622,17 @@
 		D658B88A2C29F862000CC7F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrekTracker/TrekTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrekTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = TRART5678Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read and display step counts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,14 +654,17 @@
 		D658B88B2C29F862000CC7F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TrekTracker/TrekTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrekTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = TRART5678Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read and display step counts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -600,6 +759,60 @@
 			};
 			name = Release;
 		};
+		D658BBA42C2A4E5C000CC7F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRART5678Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TrekTracker Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TrekTracker Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neelparpia.TrekTracker.TrekTracker-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D658BBA52C2A4E5C000CC7F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRART5678Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TrekTracker Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TrekTracker Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "neelparpia.TrekTracker.TrekTracker-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,6 +848,15 @@
 			buildConfigurations = (
 				D658B8902C29F862000CC7F2 /* Debug */,
 				D658B8912C29F862000CC7F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D658BBA32C2A4E5C000CC7F2 /* Build configuration list for PBXNativeTarget "TrekTracker WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D658BBA42C2A4E5C000CC7F2 /* Debug */,
+				D658BBA52C2A4E5C000CC7F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

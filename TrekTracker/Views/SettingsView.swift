@@ -1,5 +1,5 @@
 //
-//  ExercisesView.swift
+//  SettingsView.swift
 //  TrekTracker
 //
 //  Created by Neel P on 6/24/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExercisesView: View {
+struct SettingsView: View {
     var body: some View {
         Spacer()
         VStack {
@@ -19,5 +19,5 @@ struct ExercisesView: View {
 }
 
 #Preview {
-    ExercisesView()
+    SettingsView()
 }

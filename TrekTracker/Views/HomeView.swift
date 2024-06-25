@@ -7,22 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    // @StateObject var healthKitManager = HealthKitManager.shared
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
-                Spacer()
-                HStack(alignment: .center) {
-                    Image("Logo")
-                        .resizable()
-                        .frame(width: 70, height:70)
-                    Text("TrekTracker")
-                        .font(.title)
-                        .bold()
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: 100)
-            .background(Color("blue_50"))
             
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 Text("1000")
@@ -33,12 +23,10 @@ struct ContentView: View {
                     .bold()
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-
+            
             Spacer()
             
             TimelineView()
-            
-            FooterView()
         }
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()
@@ -47,5 +35,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
