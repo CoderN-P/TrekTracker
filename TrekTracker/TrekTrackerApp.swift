@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct TrekTrackerApp: App {
@@ -13,6 +14,7 @@ struct TrekTrackerApp: App {
         WindowGroup {
             MainView()
         }
+        .modelContainer(for: User.self)
     }
 }
 

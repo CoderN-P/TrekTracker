@@ -1,18 +1,21 @@
-//
-//  Step1View.swift
-//  TrekTracker
-//
-//  Created by Neel P on 6/24/24.
-//
-
 import SwiftUI
 import SwiftData
+import HealthKitUI
 
-struct Step2View: View {
-    @State var goal: String = ""
-    @State var isValid: Bool = false
+struct RequestHealthKitView: View {
     @Bindable var user: User
+    @State var trigger: Bool = false
     @Environment(\.colorScheme) var colorScheme
+    
+    let allTypes: Set = [
+        HKQuantityType(.activeEnergyBurned),
+        HKQuantityType(.distanceWalkingRunning),
+        HKQuantityType(.heartRate),
+        HKQuantityType(.stepCount)
+    ]
+    
+    var healthStore = HKHealthStore()
+
     
     var body: some View {
         NavigationStack {
@@ -40,33 +43,21 @@ struct Step2View: View {
                 
                 VStack {
                     HStack {
-                        Text("Hi \(user.name)")
+                        Text("Thank you")
                             .bold()
                             .font(.system(size: 50))
                     }
                     
-                    Text("Create a daily step goal!")
+                    Text("We use your health data to display accurate step counts and other important information")
                     
                     Spacer()
                     
-                    TextField(text: $goal) {
-                        Text("Enter your goal (10,000)").foregroundStyle(colorScheme == .dark ?
-                                                                         Color("green_600") :
-                                                                            Color("green_400")
-                        )
-                    }
-                    .padding()
-                    .background(colorScheme == .dark ?
-                                Color("neutral_900") :
-                                    Color("gray_100")
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Button(action: step3) {
-                        Text("Continue")
+                    Button(action: home) {
+                           Text("Complete")
+                            .bold()
                             .foregroundStyle(.white)
                     }
-                    .disabled(!isValid)
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(colorScheme == .dark ?
@@ -74,6 +65,19 @@ struct Step2View: View {
                                     Color("green_500")
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .healthDataAccessRequest(
+                        store: healthStore,
+                        readTypes: allTypes,
+                        trigger: trigger) { result in
+                            switch result {
+                                
+                                case .success(_):
+                                    user.authenticatedHealthKit = true
+                                case .failure(let error):
+                                    // Handle the error here.
+                                    print("*** An error occurred while requesting authentication: \(error) ***")
+                            }
+                    }
                     
                     Spacer()
                 }
@@ -90,24 +94,29 @@ struct Step2View: View {
                             Color("green_200"))
             .ignoresSafeArea()
         }
-        .onChange(of: goal) {
-            isValid = !goal.isEmpty
+        .onAppear() {
+            if HKHealthStore.isHealthDataAvailable() {
+                // Modifying the trigger initiates the health data
+                // access request.
+                trigger.toggle()
+            }
         }
     }
     
-    func step3(){
-        if isValid {
-            user.onboardingStep += 1
-            user.goal = Int(goal) ?? 10000
-        }
+    func home(){
+        user.onboardingStep += 1
     }
+
     
 }
+
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: User.self, configurations: config)
     let user = User(name: "neel")
 
-    return Step2View(user: user).modelContainer(container)
+    return RequestHealthKitView(user: user).modelContainer(container)
 }
+
+

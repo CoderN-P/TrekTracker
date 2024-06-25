@@ -74,5 +74,5 @@ class HealthKitManager: ObservableObject {
       }
       healthStore.execute(query)
     }
-}*/
-
+}
+*/

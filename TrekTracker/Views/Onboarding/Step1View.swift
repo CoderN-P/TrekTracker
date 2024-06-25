@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Step1View: View {
     @State private var name: String = ""
     @State private var isValid = false
-    @Binding var onboardingStep: Int
+    @Bindable var user: User
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -97,19 +98,16 @@ struct Step1View: View {
     
     func step2(){
         if isValid {
-            onboardingStep += 1
+            user.onboardingStep += 1
+            user.name = name
         }
     }
 }
 
 #Preview {
-    struct Step2Preview : View {
-          @State private var value = 1
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: User.self, configurations: config)
+    let user = User(name: "neel")
 
-          var body: some View {
-             Step2View(onboardingStep: $value)
-          }
-       }
-
-       return Step2Preview()
+    return Step1View(user: user).modelContainer(container)
 }

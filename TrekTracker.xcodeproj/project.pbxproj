@@ -37,6 +37,11 @@
 		D658BBB02C2A7BAC000CC7F2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */; };
 		D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */; };
 		D658BBB42C2A8B39000CC7F2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */; };
+		D658BBB82C2B11B6000CC7F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB72C2B11B6000CC7F2 /* User.swift */; };
+		D658BBBA2C2B126D000CC7F2 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBB92C2B126D000CC7F2 /* Workout.swift */; };
+		D658BBBC2C2B12AB000CC7F2 /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBBB2C2B12AB000CC7F2 /* StepData.swift */; };
+		D658BBC02C2B22E3000CC7F2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */; };
+		D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +118,11 @@
 		D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D658BBB72C2B11B6000CC7F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D658BBB92C2B126D000CC7F2 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		D658BBBB2C2B12AB000CC7F2 /* StepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
+		D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHealthKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 		D658B8672C29F860000CC7F2 /* TrekTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D658BBB62C2B11A6000CC7F2 /* Models */,
 				D658BBA72C2A5081000CC7F2 /* TrekTracker.entitlements */,
 				D658B8A12C2A06C4000CC7F2 /* utils */,
 				D658B8A02C2A06B0000CC7F2 /* Views */,
@@ -223,6 +234,7 @@
 				D658BBAF2C2A7BAC000CC7F2 /* MainView.swift */,
 				D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */,
 				D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */,
+				D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,8 +278,19 @@
 			children = (
 				D658BBAB2C2A5458000CC7F2 /* Step1View.swift */,
 				D658BBAD2C2A75A6000CC7F2 /* Step2View.swift */,
+				D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D658BBB62C2B11A6000CC7F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D658BBB72C2B11B6000CC7F2 /* User.swift */,
+				D658BBB92C2B126D000CC7F2 /* Workout.swift */,
+				D658BBBB2C2B12AB000CC7F2 /* StepData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,9 +468,14 @@
 				D658B8992C2A02DA000CC7F2 /* getBarColor.swift in Sources */,
 				D658BB892C2A4E1F000CC7F2 /* SettingsView.swift in Sources */,
 				D658BBA92C2A525C000CC7F2 /* HealthKitManager.swift in Sources */,
+				D658BBC02C2B22E3000CC7F2 /* IntroView.swift in Sources */,
+				D658BBB82C2B11B6000CC7F2 /* User.swift in Sources */,
 				D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */,
 				D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */,
+				D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */,
+				D658BBBA2C2B126D000CC7F2 /* Workout.swift in Sources */,
 				D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */,
+				D658BBBC2C2B12AB000CC7F2 /* StepData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
