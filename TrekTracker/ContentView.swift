@@ -10,6 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
+            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+                Spacer()
+                HStack(alignment: .center) {
+                    Image("Logo")
+                        .resizable()
+                        .frame(width: 70, height:70)
+                    Text("TrekTracker")
+                        .font(.title)
+                        .bold()
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: 100)
+            .background(Color("blue_50"))
             
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 Text("1000")
@@ -28,7 +41,7 @@ struct ContentView: View {
             FooterView()
         }
         .frame(maxWidth: .infinity)
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea()
     
     }
 }
