@@ -24,9 +24,9 @@ func getDay(date: Date) -> String{
 func getBarString(_ date: Date) -> String {
     let currentDate = Date()
     
-    let timeInterval = Int(currentDate.timeIntervalSince(date).rounded())
+    let calendar = Calendar.current
     
-    if timeInterval < MILLISECONDS_IN_WEEK {
+    if date >= calendar.date(byAdding: .day, value: -7, to: Date())!{
         return String(getDay(date: date).prefix(3))
     }
     
@@ -39,7 +39,7 @@ func getBarString(_ date: Date) -> String {
         return "\(dateString.dropLast(3))\n\(calendarDate.year ?? 2024)"
     }
     
-    return String(getDate(date: date).prefix(5))
+    return String(getDate(date: date).dropLast(3))
 }
 
 func getPastDate() -> Date {

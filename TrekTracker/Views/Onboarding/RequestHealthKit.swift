@@ -6,15 +6,7 @@ struct RequestHealthKitView: View {
     @Bindable var user: User
     @State var trigger: Bool = false
     @Environment(\.colorScheme) var colorScheme
-    
-    let allTypes: Set = [
-        HKQuantityType(.activeEnergyBurned),
-        HKQuantityType(.distanceWalkingRunning),
-        HKQuantityType(.heartRate),
-        HKQuantityType(.stepCount)
-    ]
-    
-    var healthStore = HKHealthStore()
+    @ObservedObject var healthKitManager: HealthKitManager
 
     
     var body: some View {
@@ -43,41 +35,26 @@ struct RequestHealthKitView: View {
                 
                 VStack {
                     HStack {
-                        Text("Thank you")
+                        Text("Almost done")
                             .bold()
                             .font(.system(size: 50))
                     }
                     
-                    Text("We use your health data to display accurate step counts and other important information")
+                    Text("Please allow access to your health data")
                     
                     Spacer()
                     
                     
                     Button(action: home) {
-                           Text("Complete")
-                            .bold()
-                            .foregroundStyle(.white)
-                    }
-                    .padding()
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(colorScheme == .dark ?
-                                Color("green_900") :
-                                    Color("green_500")
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .healthDataAccessRequest(
-                        store: healthStore,
-                        readTypes: allTypes,
-                        trigger: trigger) { result in
-                            switch result {
-                                
-                                case .success(_):
-                                    user.authenticatedHealthKit = true
-                                case .failure(let error):
-                                    // Handle the error here.
-                                    print("*** An error occurred while requesting authentication: \(error) ***")
-                            }
-                    }
+                       Text("Allow")
+                           .foregroundColor(.white)
+                           .padding()
+                           .frame(maxWidth: .infinity) // Make the text take full width
+                           .background(colorScheme == .dark ? Color("green_900") : Color("green_500"))
+                           .cornerRadius(10)
+                   }
+                   .frame(maxWidth: .infinity) // Make the button take full width
+                    
                     
                     Spacer()
                 }
@@ -104,7 +81,7 @@ struct RequestHealthKitView: View {
     }
     
     func home(){
-        user.onboardingStep += 1
+        healthKitManager.requestAuthorization(user: user)
     }
 
     
@@ -116,7 +93,7 @@ struct RequestHealthKitView: View {
     let container = try! ModelContainer(for: User.self, configurations: config)
     let user = User(name: "neel")
 
-    return RequestHealthKitView(user: user).modelContainer(container)
+    return RequestHealthKitView(user: user, healthKitManager: HealthKitManager()).modelContainer(container)
 }
 
 

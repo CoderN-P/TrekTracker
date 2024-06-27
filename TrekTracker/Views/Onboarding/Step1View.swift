@@ -50,31 +50,34 @@ struct Step1View: View {
                     
                     Spacer()
                     
-                    TextField(text: $name) {
-                        Text("Enter your name").foregroundStyle(colorScheme == .dark ?
-                                                                Color("green_600") :
-                                                                    Color("green_400")
-                        )
+                    
+                    ZStack {
+                        // Background with corner radius
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(colorScheme == .dark ? Color("neutral_900") : Color("gray_100"))
+                            .frame(maxWidth: .infinity, maxHeight: 50) // Ensure clickable area
+                        
+                        // TextField with padding and foreground color
+                        TextField(text: $name) {
+                            Text("Enter your name")
+                            
+                            .foregroundColor(colorScheme == .dark ? Color("green_600") : Color("green_400"))
+                            .frame(maxWidth: .infinity, minHeight: 44) // Ensure clickable area
+                            .background(Color.clear) // Ensure background doesn't affect layout
+                        }
+                        .padding()
                     }
-                    .padding()
-                    .background(colorScheme == .dark ?
-                                Color("neutral_900") :
-                                    Color("gray_100")
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     Button(action: step2) {
-                        Text("Continue")
-                            .foregroundStyle(.white)
-                    }
-                    .padding()
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(colorScheme == .dark ?
-                                Color("green_900") :
-                                    Color("green_500")
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .disabled(!isValid)
+                       Text("Continue")
+                           .foregroundColor(.white)
+                           .padding()
+                           .frame(maxWidth: .infinity) // Make the text take full width
+                           .background(colorScheme == .dark ? Color("green_900") : Color("green_500"))
+                           .cornerRadius(10)
+                   }
+                   .frame(maxWidth: .infinity) // Make the button take full width
+                   .disabled(!isValid)
                     
                     Spacer()
                 }

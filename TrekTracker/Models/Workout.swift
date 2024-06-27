@@ -12,7 +12,7 @@ import SwiftData
 class Workout {
     var duration: Int // Amount of seconds
     
-    init(duration: Int){
+    init(duration: Int = 0){
         self.duration = duration
     }
 }

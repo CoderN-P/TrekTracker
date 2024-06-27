@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct IntroView: View {
-    var addUser: () -> Void
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         Button(action: addUser){
             Text("Begin")
         }
     }
+    
+    func addUser(){
+        modelContext.insert(User())
+    }
 }
 
 #Preview {
-    IntroView(addUser: addUserNull)
-}
-
-func addUserNull(){
-    print("hello")
-    return
+    IntroView()
 }

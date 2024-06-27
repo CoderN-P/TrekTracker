@@ -42,6 +42,8 @@
 		D658BBBC2C2B12AB000CC7F2 /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBBB2C2B12AB000CC7F2 /* StepData.swift */; };
 		D658BBC02C2B22E3000CC7F2 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */; };
 		D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */; };
+		D658BBC42C2C6FD8000CC7F2 /* PreferredUnitEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */; };
+		D658BBC62C2C730D000CC7F2 /* generateMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC52C2C730D000CC7F2 /* generateMockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		D658BBBB2C2B12AB000CC7F2 /* StepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
 		D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHealthKit.swift; sourceTree = "<group>"; };
+		D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredUnitEnum.swift; sourceTree = "<group>"; };
+		D658BBC52C2C730D000CC7F2 /* generateMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateMockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,7 @@
 				D658B8982C2A02DA000CC7F2 /* getBarColor.swift */,
 				D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */,
 				D658BBA82C2A525C000CC7F2 /* HealthKitManager.swift */,
+				D658BBC52C2C730D000CC7F2 /* generateMockData.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				D658BBB72C2B11B6000CC7F2 /* User.swift */,
 				D658BBB92C2B126D000CC7F2 /* Workout.swift */,
 				D658BBBB2C2B12AB000CC7F2 /* StepData.swift */,
+				D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */,
 				D658BBB42C2A8B39000CC7F2 /* HeaderView.swift in Sources */,
 				D658B89F2C2A064C000CC7F2 /* getBarHeight.swift in Sources */,
+				D658BBC62C2C730D000CC7F2 /* generateMockData.swift in Sources */,
 				D658BBAE2C2A75A6000CC7F2 /* Step2View.swift in Sources */,
 				D658BBB02C2A7BAC000CC7F2 /* MainView.swift in Sources */,
 				D658B8952C29FFB5000CC7F2 /* getDate.swift in Sources */,
@@ -472,6 +479,7 @@
 				D658BBB82C2B11B6000CC7F2 /* User.swift in Sources */,
 				D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */,
 				D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */,
+				D658BBC42C2C6FD8000CC7F2 /* PreferredUnitEnum.swift in Sources */,
 				D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */,
 				D658BBBA2C2B126D000CC7F2 /* Workout.swift in Sources */,
 				D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */,

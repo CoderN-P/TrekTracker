@@ -13,11 +13,13 @@ import SwiftData
 class StepData {
     var date: Date
     var steps: Int
+    var distance: Double
     var calories: Int
     
-    init(date: Date = Date(), steps: Int = 0, calories: Int = 0){
+    init(date: Date = Date(), steps: Int = 0, distance: Double = 0, calories: Int = 0){
         self.date = date
         self.steps = steps
+        self.distance = distance
         self.calories = calories
     }
 }
