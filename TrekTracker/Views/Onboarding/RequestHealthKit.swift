@@ -4,7 +4,6 @@ import HealthKitUI
 
 struct RequestHealthKitView: View {
     @Bindable var user: User
-    @State var trigger: Bool = false
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var healthKitManager: HealthKitManager
 
@@ -71,16 +70,10 @@ struct RequestHealthKitView: View {
                             Color("green_200"))
             .ignoresSafeArea()
         }
-        .onAppear() {
-            if HKHealthStore.isHealthDataAvailable() {
-                // Modifying the trigger initiates the health data
-                // access request.
-                trigger.toggle()
-            }
-        }
     }
     
     func home(){
+        user.authenticatedHealthKit = true
         healthKitManager.requestAuthorization(user: user)
     }
 

@@ -7,24 +7,43 @@
 
 import SwiftUI
 import MapKit
+import SwiftData
 
 struct WorkoutView: View {
+    var workout: Workout
+    @ObservedObject var locationManager: LocationManager
+    
     var body: some View {
         VStack {
-            Map {
-                
+            Map() {
+                ForEach(workout.location, id: \.self){location in
+                    Marker("a", coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)).tint(.orange)
+                }
             }
+            .frame(height: 300) // Adjust the map height as needed
             VStack {
-                Text("Ran 5 Miles")
-                    .font(.title)
-                    .bold()
-                
-                
+                HStack {
+                    Text("Workout")
+                        .font(.title)
+                        .bold()
+                    Spacer()
+                    Text(getDate(date: workout.startDate))
+                }
             }
+            .padding()
+        }
+        .onAppear {
+            locationManager.checkLocationAuthorization()
         }
     }
 }
 
 #Preview {
-    WorkoutView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: User.self, configurations: config)
+    let user = User(name: "neel")
+
+    return WorkoutView(workout: Workout(healthKitManager: HealthKitManager()), locationManager: LocationManager()).modelContainer(container)
 }
+
+

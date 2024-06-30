@@ -16,9 +16,10 @@ struct HomeView: View {
     @Bindable var user: User
     
     var body: some View {
-        var curSteps = Int(user.steps.count > 0 ? user.steps[user.steps.count - 1].steps : 0)
-        var color = getBarColor(steps: curSteps, threshold: user.goal)
-        var curDist = round((user.steps.count > 0 ? user.steps[user.steps.count - 1].distance : 0.0) * 10 * (user.preferredUnit == "km" ? 1.609 : 1))/10
+        let curSteps = Int(user.steps.count > 0 ? user.steps[user.steps.count - 1].steps : 0)
+        let color = getBarColor(steps: curSteps, threshold: user.goal)
+        let curDist = round((user.steps.count > 0 ? user.steps[user.steps.count - 1].distance : 0.0) * 10 * (user.preferredUnit == "km" ? 1.609 : 1))/10
+       
         VStack(alignment: .leading) {
             Spacer()
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
@@ -38,40 +39,9 @@ struct HomeView: View {
             Spacer()
             
             TimelineView(user: user, healthKitManager: healthKitManager)
+                .frame(height: 500)
             
             Spacer()
-        }
-        .onAppear() {
-
-             if user.steps.count > 0 && Calendar.current.isDate(user.steps[user.steps.count - 1].date, equalTo: Date(), toGranularity: .day){
-                 healthKitManager.fetchQuantityToday(quantity: .stepCount) {data in
-                     user.steps[user.steps.count - 1].steps = Int(data)
-                }
-                healthKitManager.fetchQuantityToday(quantity: .distanceWalkingRunning) {data in
-                     user.steps[user.steps.count - 1].distance = data
-                 }
-             } else {
-                 let curStepData = StepData(date: Date())
-                 let dispatchGroup = DispatchGroup()
-                 
-                 dispatchGroup.enter()
-                 healthKitManager.fetchQuantityToday(quantity: .stepCount) {data in
-                     curStepData.steps = Int(data)
-                     dispatchGroup.leave()
-                 }
-                 dispatchGroup.enter()
-                 healthKitManager.fetchQuantityToday(quantity: .distanceWalkingRunning) {data in
-                     curStepData.distance = data
-                     dispatchGroup.leave()
-                 }
-                 
-                 dispatchGroup.notify(queue: .main) {
-                     user.steps.append(curStepData)
-                 }
-            }
-
-            
-           
         }
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()

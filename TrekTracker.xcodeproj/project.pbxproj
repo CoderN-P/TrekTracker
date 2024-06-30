@@ -44,6 +44,13 @@
 		D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */; };
 		D658BBC42C2C6FD8000CC7F2 /* PreferredUnitEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */; };
 		D658BBC62C2C730D000CC7F2 /* generateMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC52C2C730D000CC7F2 /* generateMockData.swift */; };
+		D658BBC82C2CF14C000CC7F2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC72C2CF14C000CC7F2 /* LoadingView.swift */; };
+		D658BBCA2C2DC303000CC7F2 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBC92C2DC303000CC7F2 /* test.swift */; };
+		D658BBCC2C2F1BE4000CC7F2 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBCB2C2F1BE3000CC7F2 /* WorkoutCardView.swift */; };
+		D658BBCE2C2F3938000CC7F2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBCD2C2F3938000CC7F2 /* LocationManager.swift */; };
+		D658BBD12C2F765B000CC7F2 /* WorkoutUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBD02C2F765A000CC7F2 /* WorkoutUpdater.swift */; };
+		D658BBD52C30E2EF000CC7F2 /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBD42C30E2EF000CC7F2 /* CLLocationExtension.swift */; };
+		D658BBD72C30E39A000CC7F2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658BBD62C30E39A000CC7F2 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +134,13 @@
 		D658BBC12C2B2569000CC7F2 /* RequestHealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHealthKit.swift; sourceTree = "<group>"; };
 		D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredUnitEnum.swift; sourceTree = "<group>"; };
 		D658BBC52C2C730D000CC7F2 /* generateMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateMockData.swift; sourceTree = "<group>"; };
+		D658BBC72C2CF14C000CC7F2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D658BBC92C2DC303000CC7F2 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		D658BBCB2C2F1BE3000CC7F2 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
+		D658BBCD2C2F3938000CC7F2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D658BBD02C2F765A000CC7F2 /* WorkoutUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutUpdater.swift; sourceTree = "<group>"; };
+		D658BBD42C30E2EF000CC7F2 /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		D658BBD62C30E39A000CC7F2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +253,9 @@
 				D658BBB12C2A7CDB000CC7F2 /* HomeView.swift */,
 				D658BBB32C2A8B39000CC7F2 /* HeaderView.swift */,
 				D658BBBF2C2B22E3000CC7F2 /* IntroView.swift */,
+				D658BBC72C2CF14C000CC7F2 /* LoadingView.swift */,
+				D658BBC92C2DC303000CC7F2 /* test.swift */,
+				D658BBCB2C2F1BE3000CC7F2 /* WorkoutCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +269,8 @@
 				D658B89E2C2A064C000CC7F2 /* getBarHeight.swift */,
 				D658BBA82C2A525C000CC7F2 /* HealthKitManager.swift */,
 				D658BBC52C2C730D000CC7F2 /* generateMockData.swift */,
+				D658BBCD2C2F3938000CC7F2 /* LocationManager.swift */,
+				D658BBD42C30E2EF000CC7F2 /* CLLocationExtension.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -295,6 +314,8 @@
 				D658BBB92C2B126D000CC7F2 /* Workout.swift */,
 				D658BBBB2C2B12AB000CC7F2 /* StepData.swift */,
 				D658BBC32C2C6FD8000CC7F2 /* PreferredUnitEnum.swift */,
+				D658BBD02C2F765A000CC7F2 /* WorkoutUpdater.swift */,
+				D658BBD62C30E39A000CC7F2 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,6 +430,9 @@
 				Base,
 			);
 			mainGroup = D658B85C2C29F860000CC7F2;
+			packageReferences = (
+				D658BBCF2C2F75D4000CC7F2 /* XCRemoteSwiftPackageReference "CLLocation-Codable" */,
+			);
 			productRefGroup = D658B8662C29F860000CC7F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -463,7 +487,10 @@
 				D658BB402C2A35EB000CC7F2 /* ExercisesView.swift in Sources */,
 				D658B8972C2A0250000CC7F2 /* BarStatsView.swift in Sources */,
 				D658B8932C29FDDF000CC7F2 /* getTimeString.swift in Sources */,
+				D658BBCA2C2DC303000CC7F2 /* test.swift in Sources */,
 				D658BBAC2C2A5458000CC7F2 /* Step1View.swift in Sources */,
+				D658BBD12C2F765B000CC7F2 /* WorkoutUpdater.swift in Sources */,
+				D658BBCC2C2F1BE4000CC7F2 /* WorkoutCardView.swift in Sources */,
 				D658BB3C2C2A1055000CC7F2 /* FooterView.swift in Sources */,
 				D658BB3E2C2A34D4000CC7F2 /* WorkoutView.swift in Sources */,
 				D658BBB42C2A8B39000CC7F2 /* HeaderView.swift in Sources */,
@@ -478,10 +505,14 @@
 				D658BBC02C2B22E3000CC7F2 /* IntroView.swift in Sources */,
 				D658BBB82C2B11B6000CC7F2 /* User.swift in Sources */,
 				D658BBB22C2A7CDB000CC7F2 /* HomeView.swift in Sources */,
+				D658BBC82C2CF14C000CC7F2 /* LoadingView.swift in Sources */,
 				D658B8692C29F860000CC7F2 /* TrekTrackerApp.swift in Sources */,
 				D658BBC42C2C6FD8000CC7F2 /* PreferredUnitEnum.swift in Sources */,
 				D658BBC22C2B2569000CC7F2 /* RequestHealthKit.swift in Sources */,
+				D658BBD52C30E2EF000CC7F2 /* CLLocationExtension.swift in Sources */,
+				D658BBCE2C2F3938000CC7F2 /* LocationManager.swift in Sources */,
 				D658BBBA2C2B126D000CC7F2 /* Workout.swift in Sources */,
+				D658BBD72C30E39A000CC7F2 /* Location.swift in Sources */,
 				D658BB3A2C2A0DF2000CC7F2 /* TimelineView.swift in Sources */,
 				D658BBBC2C2B12AB000CC7F2 /* StepData.swift in Sources */,
 			);
@@ -669,6 +700,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read and display step counts";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To show user location during workouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -701,6 +733,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To read and display step counts";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To show user location during workouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -898,6 +931,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D658BBCF2C2F75D4000CC7F2 /* XCRemoteSwiftPackageReference "CLLocation-Codable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/visskiss/CLLocation-Codable";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = D658B85D2C29F860000CC7F2 /* Project object */;
 }

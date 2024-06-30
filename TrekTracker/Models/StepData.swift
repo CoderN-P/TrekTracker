@@ -10,9 +10,10 @@ import SwiftData
 
 
 @Model
-class StepData {
+class StepData: Identifiable {
+    var id: UUID = UUID()
     var date: Date
-    var steps: Int
+    var steps: Int = 0
     var distance: Double
     var calories: Int
     

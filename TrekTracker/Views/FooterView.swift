@@ -10,6 +10,7 @@ import SwiftUI
 struct FooterView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var activePage: String
+    @Binding var workout: Workout?
     
     var body: some View {
         HStack {
@@ -66,23 +67,27 @@ struct FooterView: View {
     
     func setActiveSteps() {
         activePage = "steps"
+        workout = nil
     }
     
     func setActiveWorkouts() {
         activePage = "workouts"
+        workout = nil
     }
     
     func setActiveSettings() {
         activePage = "settings"
+        workout = nil
     }
 }
 
 #Preview {
     struct FooterPreview : View {
           @State private var activePage = "steps"
+         @State private var workout: Workout? = nil
 
           var body: some View {
-              FooterView(activePage: $activePage)
+              FooterView(activePage: $activePage, workout: $workout)
           }
        }
 

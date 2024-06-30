@@ -47,3 +47,24 @@ func getPastDate() -> Date {
     formatter.dateFormat = "yyyy/MM/dd HH:mm"
     return formatter.date(from: "2016/10/08 22:31") ?? Date()
 }
+
+func formatSeconds(_ seconds: Int) -> String {
+    if seconds < 60 {
+        if seconds < 10 {
+            return "00:0\(seconds)"
+        }
+        return "00:\(seconds)"
+    }
+    
+    if seconds < 3600 {
+        let minutes = Int(seconds/60)
+        let remainingSeconds = seconds%60
+
+        if remainingSeconds < 10 {
+            return "\(minutes):0\(remainingSeconds)"
+        }
+        return "\(minutes):\(remainingSeconds)"
+    }
+    
+    return ""
+}

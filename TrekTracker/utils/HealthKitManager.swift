@@ -16,12 +16,27 @@ class HealthKitManager: ObservableObject {
             if success {
                 self.fetchStepsPerDay() { stepData in
                     user.steps = stepData.sorted(by: {
-                        $1.date.compare($0.date) == .orderedDescending
+                        $0.date < $1.date
                     })
-                    user.authenticatedHealthKit = true
                     user.onboardingStep += 1
                 }
+            } else {
+                user.authenticatedHealthKit = false
             }
+        }
+    }
+    
+    func observeQuantity(quantity: HKQuantityTypeIdentifier, completion: @escaping (Double) -> ()){
+        guard let quantityType = HKQuantityType.quantityType(forIdentifier: quantity) else { return }
+        
+        let query = HKObserverQuery(sampleType: quantityType, predicate: nil) { (query, completionHandler, errorOrNil) in
+            
+            if errorOrNil != nil {
+                return
+            }
+            
+            self.fetchQuantityToday(quantity: quantity, completion: completion)
+            completionHandler()
         }
     }
     
@@ -99,5 +114,57 @@ class HealthKitManager: ObservableObject {
             
             healthStore.execute(query)
         }
+    
+
+    func fetchQuantityInInterval(start: Date, end: Date, quantity: HKQuantityTypeIdentifier, completion: @escaping (Double) -> ()) {
+        // Ensure HealthKit is available
+        guard HKHealthStore.isHealthDataAvailable() else {
+            completion(0)
+            return
+        }
+        
+        // Get the quantity type for the identifier
+        guard let quantityType = HKQuantityType.quantityType(forIdentifier: quantity) else {
+            completion(0)
+            return
+        }
+        
+        // Create the predicate for the specified date range
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
+        
+        let quantitySample = HKSamplePredicate.quantitySample(type: quantityType, predicate: predicate)
+        
+        // Create the query descriptor
+        let quantitySum = HKStatisticsQueryDescriptor(predicate: quantitySample, options: .cumulativeSum)
+        
+        // Execute the query
+        Task {
+            do {
+                let quantityCount = try await quantitySum.result(for: healthStore)?
+                    .sumQuantity()
+                
+                var data: Double = 0
+                
+                if quantityCount != nil {
+                    if quantity == .stepCount {
+                        data = (quantityCount?.doubleValue(for: HKUnit.count()))!
+                    } else if quantity == .distanceWalkingRunning {
+                        data = (quantityCount?.doubleValue(for: HKUnit.mile()))!
+                    }
+                }
+                
+                print(data)
+                
+                DispatchQueue.main.async {
+                    completion(data)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(0)
+                }
+            }
+        }
+    }
+
 }
 

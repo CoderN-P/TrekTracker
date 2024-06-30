@@ -11,13 +11,22 @@ struct HeaderView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var text: String
+    var createNewWorkout: () -> Void
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
             Spacer()
-            Text(text)
-                .font(.title)
-                .bold()
+            HStack {
+                Text(text)
+                    .font(.title)
+                    .bold()
+                if text == "Workouts" {
+                    Spacer()
+                    Button(action: createNewWorkout){
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: 100)
@@ -29,5 +38,9 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(text: "hello")
+    HeaderView(text: "hello", createNewWorkout: doNothing)
+}
+
+func doNothing(){
+    return
 }
